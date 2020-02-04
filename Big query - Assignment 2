@@ -1,0 +1,105 @@
+what is the ascending order of zip code and population?
+using SQL order by command i have sorted the zipcode and population in ascending order.
+
+query:
+SELECT zipcode,	population	
+FROM `bigquery-public-data.census_bureau_usa.population_by_zip_2000` 
+Order by  zipcode,	population	
+
+Output:
+Row	zipcode	population	
+1	00601	117	
+2	00601	125	
+3	00601	126	
+4	00601	127	
+5	00601	138	
+6	00601	141	
+
+2. what is the maximum population value?
+using SQL order by command MAX i have arrived at maximum value of population
+
+Query:
+SELECT MAX(Population)
+FROM `bigquery-public-data.census_bureau_usa.population_by_zip_2000` LIMIT 1000
+
+Output:
+f0_
+143987
+
+3.what is the maximum population value?
+using SQL order by command MAIN i have arrived at minimum value of population
+
+Query:
+SELECT MIN(population)
+FROM `bigquery-public-data.census_bureau_usa.population_by_zip_2000` LIMIT 1000
+Output:
+f0_
+0
+
+4.population of zipcode 94901?
+USing SQL command i have used WHERE and IN function
+Query:
+SELECT population
+FROM `bigquery-public-data.census_bureau_usa.population_by_zip_2000`
+WHERE population IN (40221)
+
+Output:
+population
+40221
+ 5. What is the sum of total population in population Zip table 2000?
+Using SQL command of SUM i have arrived at total population
+
+Query:
+SELECT SUM(population)
+FROM `bigquery-public-data.census_bureau_usa.population_by_zip_2000` LIMIT 1000
+
+Output:
+f0_
+855691548
+
+6. what is the count of total Zipcodes?
+Using SQL command COUNT i have arrived total count of zipcodes
+QUERY:
+SELECT COUNT(Zipcode)
+FROM `bigquery-public-data.census_bureau_usa.population_by_zip_2000` LIMIT 1000
+
+OUTPUT:
+f0_
+1586081
+
+7. what is the average of total population?
+Using SQL command AVG i have arrived at Average population
+
+QUERY:
+SELECT AVG(population)
+FROM `bigquery-public-data.census_bureau_usa.population_by_zip_2010` LIMIT 1000
+
+OUTPUT:
+
+
+8. write alias for Zipcode in population by Zip 2010 table?
+using SQL command AS i added alias to Zipcode.
+
+Query:
+SELECT zipcode AS Z
+FROM `bigquery-public-data.census_bureau_usa.population_by_zip_2010` LIMIT 1000
+
+OUTPUT:
+Z
+601
+602
+603
+606
+610
+612
+616
+
+
+
+
+
+
+
+
+
+
